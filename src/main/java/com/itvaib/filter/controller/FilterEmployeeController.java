@@ -1,4 +1,4 @@
-package com.itvaib.search.controller;
+package com.itvaib.filter.controller;
 
 import java.util.List;
 
@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.itvaib.search.SearchCriteria;
-import com.itvaib.search.entity.Employee;
-import com.itvaib.search.repository.EmploeeRepo;
-import com.itvaib.search.service.FilterService;
-import com.itvaib.search.service.FilterSpecification;
+import com.itvaib.filter.entity.Employee;
+import com.itvaib.filter.model.SearchCriteria;
+import com.itvaib.filter.repository.EmploeeRepo;
+import com.itvaib.filter.service.FilterService;
+import com.itvaib.filter.service.FilterSpecification;
 
 @RestController
 @RequestMapping("employee")
@@ -32,7 +32,6 @@ public class FilterEmployeeController {
     public List<Employee> search(@RequestBody List<SearchCriteria> searchCriteria) {
 //    	
     	FilterSpecification<Employee> spec1 = new FilterSpecification(new SearchCriteria("salary", ">", "10000"));
-//    	FilterSpecification spec1 = null;
     	FilterSpecification<Employee> spec2 = new FilterSpecification(new SearchCriteria("name", ":", "abc"));
 //    	for(SearchCriteria criteria : searchCriteria) {
 //    		Specification.where(spec1)

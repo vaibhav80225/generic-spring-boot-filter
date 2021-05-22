@@ -1,4 +1,4 @@
-package com.itvaib.search.service;
+package com.itvaib.filter.service;
 
 import java.util.Arrays;
 import java.util.List;
@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.itvaib.search.SearchCriteria;
-import com.itvaib.search.entity.Employee;
-import com.itvaib.search.repository.EmploeeRepo;
-import com.itvaib.search.repository.FilterKeyMasterRepo;
+import com.itvaib.filter.entity.Employee;
+import com.itvaib.filter.model.SearchCriteria;
+import com.itvaib.filter.repository.EmploeeRepo;
+import com.itvaib.filter.repository.FilterKeyMasterRepo;
 
 @Service
 public class FilterService {

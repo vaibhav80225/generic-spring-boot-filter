@@ -1,4 +1,4 @@
-package com.itvaib.search;
+package com.itvaib.filter.model;
 
 public class SearchCriteria {
 	private String key;
@@ -41,9 +41,5 @@ public class SearchCriteria {
 		return "SearchCriteria [key=" + key + ", operation=" + operation + ", value=" + value + ", orPredicate="
 				+ orPredicate + "]";
 	}
-	
-	
-	
-	
 
 }

@@ -1,4 +1,4 @@
-package com.itvaib.search.entity;
+package com.itvaib.filter.entity;
 
 import java.util.List;
 

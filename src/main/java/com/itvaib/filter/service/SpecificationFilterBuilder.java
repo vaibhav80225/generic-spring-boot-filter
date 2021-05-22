@@ -1,4 +1,4 @@
-package com.itvaib.search.service;
+package com.itvaib.filter.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 
 import org.springframework.data.jpa.domain.Specification;
 
-import com.itvaib.search.SearchCriteria;
-import com.itvaib.search.entity.Employee;
+import com.itvaib.filter.entity.Employee;
+import com.itvaib.filter.model.SearchCriteria;
 
 public class SpecificationFilterBuilder<T> {
 	

@@ -1,4 +1,4 @@
-package com.itvaib.search;
+package com.itvaib.filter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

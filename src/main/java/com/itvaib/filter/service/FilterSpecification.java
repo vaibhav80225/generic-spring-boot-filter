@@ -1,4 +1,4 @@
-package com.itvaib.search.service;
+package com.itvaib.filter.service;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -8,9 +8,9 @@ import javax.persistence.criteria.Root;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 
-import com.itvaib.search.SearchCriteria;
-import com.itvaib.search.entity.Employee;
-import com.itvaib.search.repository.FilterKeyMasterRepo;
+import com.itvaib.filter.entity.Employee;
+import com.itvaib.filter.model.SearchCriteria;
+import com.itvaib.filter.repository.FilterKeyMasterRepo;
 
 public class FilterSpecification<T> implements Specification<T> {
 	private SearchCriteria criteria;
@@ -30,7 +30,7 @@ public class FilterSpecification<T> implements Specification<T> {
             return builder.greaterThanOrEqualTo(
               root.<String> get(criteria.getKey()), criteria.getValue().toString());
         } 
-        else if (criteria.getOperation().equalsIgnoreCase("<")) {
+        else if (criteria.getOperation().equalsIgnoreCase("<")) {	
             return builder.lessThanOrEqualTo(
               root.<String> get(criteria.getKey()), criteria.getValue().toString());
         } 
@@ -44,6 +44,5 @@ public class FilterSpecification<T> implements Specification<T> {
         }
         return null;
     }
-
 
 }

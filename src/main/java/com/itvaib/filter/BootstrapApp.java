@@ -1,4 +1,4 @@
-package com.itvaib.search;
+package com.itvaib.filter;
 
 import java.util.Arrays;
 
@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import com.itvaib.search.entity.Employee;
-import com.itvaib.search.repository.EmploeeRepo;
+import com.itvaib.filter.entity.Employee;
+import com.itvaib.filter.repository.EmploeeRepo;
 
-//@Configuration
+@Configuration
 public class BootstrapApp implements CommandLineRunner {
 
 	@Autowired
